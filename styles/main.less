@@ -1,0 +1,246 @@
+/*
+- Client: Portfolio Page
+- Author: Tyler James Batchelor
+- Script: Main Page - Styles
+- Created: 27/08/2016
+*/
+
+/* Global
+============================================= */
+@site-background: #f6f6f6;
+@module-background: #FFF;
+@primary-highlight: #40c4db;
+@secondary-highlight: #7b3890;
+
+@primary-text: #7f8080;
+
+@header-font: { font-family: 'Ubuntu', sans-serif };
+@body-font: { font-family: 'Roboto', sans-serif; };
+
+html {
+	margin: 0;
+	padding: 0;
+	font-size: 10px;
+	background-color: @site-background;
+	text-color: @primary-text;
+
+	body {
+		margin: 0;
+		padding: 0;
+	}
+
+	.clear-floats {
+		clear: both;
+	}
+}
+
+/* Header
+============================================= */
+header {
+	width: 100%;
+	background-color: @module-background;
+	border-bottom: 1px solid #eeeded;
+	box-shadow: 0 2px 5px rgba(91,81,73,0.08);
+	
+	h1 {
+		text-align: center;
+	}
+	#header-inner {
+		padding-left: 5%;
+		padding-right: 5%;
+		padding-top: 30px;
+		padding-bottom: 10px;
+	}
+	#logo-header {
+		margin: 0;
+		text-align: center;
+
+		img {
+			width: 193px;
+			vertical-align: baseline;
+		}
+	}
+	nav {
+		text-align: center;
+		border-top: 1px solid #eeeded;
+
+		a {
+			display: inline-block;
+			padding-top: 20px;
+			padding-bottom: 20px;
+			padding-left: 2.1em;
+			padding-right: 2.1em;
+			text-decoration: none;
+			font-size: 1.3em;
+			font-weight: 400;
+			color: @primary-text;
+			margin-right: -3px;
+			@header-font();
+		}
+		a:hover {
+			border-top: 1px solid @secondary-highlight;
+			background-color: rgba(0,0,0,0.05);
+		}
+		.active-nav {
+			border-top: 1px solid @primary-highlight;
+			background-color: rgba(0,0,0,0.05);
+		}
+	}
+}
+
+/* Main Content
+============================================= */
+.page-wrapper {
+	width: 1200px;
+	height: 300px;
+	margin: 0 auto;
+	margin-top: 70px;
+
+	.primary-column {
+		width: 68%;
+		float: left;
+
+		.primary-column-double {
+			width: 46%;
+			margin-left: 0%;
+			margin-right: 4%;
+			background-color: @module-background;
+			float: left;
+			box-shadow: 0 2px 5px rgba(91,81,73,0.08);
+			margin-bottom: 40px;
+			overflow: hidden;
+
+			img {
+				width: 100%;
+				display: block;
+			}
+			.primary-double-content {
+				height: 200px;
+				width: 100%;
+				text-align: center;
+				position: relative;
+
+				h3 {
+					font-size: 2em;
+					margin-top: 30px;
+					margin-bottom: 0px;
+					color: @primary-text;
+					font-weight: 300;
+					padding-left: 10%;
+					padding-right: 10%;
+					@header-font();
+				}
+				p {
+					padding-left: 10%;
+					padding-right: 10%;
+					margin-top: 8px;
+					font-size: 1.3em;
+					line-height: 1.7em;
+					letter-spacing: 0.7px;
+					color: @primary-text;
+					text-align: justify;
+					@body-font();
+				}
+				.primary-text-fade {
+					width: 100%;
+					height: 40px;
+					position: absolute;
+					bottom: 40px;
+					/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,ffffff+50,ffffff+100&0+0,1+50,1+100 */
+					background: -moz-linear-gradient(top,  rgba(255,255,255,0) 0%, rgba(255,255,255,1) 50%, rgba(255,255,255,1) 100%); /* FF3.6-15 */
+					background: -webkit-linear-gradient(top,  rgba(255,255,255,0) 0%,rgba(255,255,255,1) 50%,rgba(255,255,255,1) 100%); /* Chrome10-25,Safari5.1-6 */
+					background: linear-gradient(to bottom,  rgba(255,255,255,0) 0%,rgba(255,255,255,1) 50%,rgba(255,255,255,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+					filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#ffffff',GradientType=0 ); /* IE6-9 */
+
+				}
+				.primary-double-controls {
+					width: 100%;
+					border-top: 1px solid #eeeded;
+					position: absolute;
+					bottom: 0;
+					background-color: #fff;
+					
+					a {
+						color: @primary-text;
+						@header-font();
+						text-decoration: none;
+						display: inline-block;
+						padding-top: 0.45em;
+						padding-bottom: 0.45em;
+
+						span {
+							font-size: 1.7em;
+						}
+						.glyphicons-heart-empty:before {
+							padding-right: 4px !important;
+						}
+						.control-text {
+							display: inline-block;
+							font-size: 1.5em;
+							line-height: 1.87em;
+							vertical-align: top;
+						}
+					}
+				}
+			}
+		}
+		.primary-column-double:after {
+			content: '';
+    		display: block;
+    		clear: both;
+		}
+	}
+	.secondary-column {
+		width: 32%;
+		float: right;
+
+		.secondary-column-single {
+			width: 90%;
+			background-color: @module-background;
+			float: right;
+			box-shadow: 0 2px 5px rgba(91,81,73,0.08);
+			padding-top: 30px;
+			padding-bottom: 30px;
+			text-align: center;
+			margin-bottom: 40px;
+
+			h2 {
+				font-size: 2em;
+				margin-top: 30px;
+				margin-bottom: 10px;
+				color: @primary-text;
+				font-weight: 300;
+				padding-left: 10%;
+				padding-right: 10%;
+				@header-font();
+			}
+			p {
+				padding-left: 10%;
+				padding-right: 10%;
+				font-size: 1.3em;
+				line-height: 1.6em;
+				color: @primary-text;
+				text-align: justify;
+				@body-font();
+			}
+
+			#bio-image {
+				border-radius: 50%;
+				width: 	50%;
+				overflow: hidden;
+				margin: 0 auto;
+
+				img {
+					width: 100%;
+					display: block;
+				}
+			}
+		}
+		.secondary-column-single:after {
+			content: '';
+    		display: block;
+    		clear: both;
+		}
+	}
+}
+
